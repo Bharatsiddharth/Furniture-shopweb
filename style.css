@@ -105,7 +105,7 @@ nav h1{
     height: 100%;
     padding-left: 10vw;
     padding-top: 10vw;
-    background-color: bisque;
+    /* background-color: bisque; */
     
     flex-shrink: 0;
     
@@ -161,4 +161,77 @@ nav h1{
 
 .cards::-webkit-scrollbar{
     display: none;
+}
+
+
+.page3{
+    height: 100vh;
+    width: 100%;
+    /* background-color: aquamarine; */
+    display: flex;
+}
+
+.left-page3{
+    width: 50%;
+    height: 100%;
+    /* background-color: lawngreen; */
+    padding-top: 10vw;
+    padding-left: 10vw;
+}
+
+.left-page3 h1{
+    font-size: 3vw;
+}
+
+.left-page3 p{
+    font-size: 1vw;
+    margin-top: 1vw;
+}
+
+.categories {
+    height: 60%;
+    width: 90%;
+    /* background-color: blue; */
+    margin-top: 2vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-rows: repeat(2, 1fr); /* 2 rows */
+   
+}
+
+.categories .card-1 {
+    /* background-color: azure; */
+    align-items: center;
+    padding: 1vw;
+}
+
+.card-1 i {
+    font-size: 2.5vw;
+}
+
+.card-1 h3 {
+    font-size: 1.1vw;
+    padding: 0.5vw 0;
+}
+
+.card-1 h5 {
+    font-size: 0.8vw;
+    font-weight: 100;
+}
+.right-page3{
+    height: 100%;
+    width: 50%;
+    /* background-color: beige; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-page3 img{
+    height: 80%;
+    width: 60%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+    margin-right: 5vw;
 }
