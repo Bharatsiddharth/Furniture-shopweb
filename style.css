@@ -67,7 +67,7 @@ nav h1{
     height: 100%;
     /* background-color: bisque; */
     padding-left: 13vw;
-    padding-top: 8vw;
+    padding-top: 5vw;
 }
 
 .left-content1 h1{
@@ -86,8 +86,9 @@ nav h1{
 }
 
 .content-page1 img{
+    margin-top: 5vw;
     height: 70vh;
-    width: 60%;
+    width: 80%;
     object-fit: contain;
 }
 
@@ -234,4 +235,146 @@ nav h1{
     object-position: center;
     border-radius: 20px;
     margin-right: 5vw;
+}
+
+.page4{
+    height: 100vh;
+    width: 100%;
+    /* background-color: bisque; */
+    display: flex;
+}
+
+.images{
+    height: 100%;
+    width: 55%;
+    /* background-color: aqua; */
+    position: relative;
+}
+.images .img1{
+    height: 65%;
+    width: 50%;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    border-radius: 20px;
+}
+
+.images .img2{
+    height: 50%;
+    width: 50%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+.images .img3{
+    height: 23%;
+    width: 23%;
+    position: absolute;
+    top: 15%;
+    left: 67%;
+    border-radius: 20px;
+    object-position: center;
+    /* object-fit: contain; */
+}
+
+.right-page4{
+    height: 100%;
+    width: 45%;
+    /* background-color: blue; */
+    padding-top: 7vw;
+    padding-left: 1vw;
+    padding-right: 5vw;
+}
+
+.right-page4 h1{
+    font-size: 3vw;
+    font-weight: 500;
+}
+
+.right-page4 p{
+    font-size: 1vw;
+    padding: 1vw 0;
+}
+
+.right-page4 button{
+    padding: 0.7vw 2vw;
+    font-family: monospace;
+    border-radius: 20px;
+    color: white;
+    background-color: black;
+    font-size: 1vw;
+}
+
+
+.categories-page4 {
+    /* height: 60%; */
+    width: 100%;
+    /* background-color: blue; */
+    /* background-color: antiquewhite; */
+    margin-top: 2vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-rows: repeat(2, 1fr); /* 2 rows */
+   
+}
+
+.categories-page4 .card-1-page4 {
+    /* background-color: azure; */
+    /* align-items: center; */
+    padding: 1vw;
+}
+
+.categories-page4 .card-1-page4 h5 {
+    font-size: 1vw;
+    padding: 0.5vw 0;
+}
+
+
+
+.page5{
+    min-height: 100vh;
+    width: 100%;
+    background-color: antiquewhite;
+}
+
+.page5-cards{
+    height: 30vh;
+    width: 100%;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.page5-cards .first{
+    height: 80%;
+    width: 25%;
+    background-color: azure;
+    display: flex;
+    
+}
+
+.first img{
+    height: 100%;
+    width: 50%;
+    object-fit: contain;
+}
+
+.first .data h2{
+    margin-top: 2vw;
+}
+
+.data h4{
+    margin: 0.5vw 0;
+}
+
+.data button{
+    border: none;
+    background-color: transparent;
+    font-size: 1vw;
+    margin-top: 1vw;
 }

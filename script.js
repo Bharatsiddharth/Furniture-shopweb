@@ -31,3 +31,54 @@ document.querySelector(".cards").innerHTML = clutter;
 addproduct();
 
 
+// Data for card-1 elements
+const cardData = [
+    {
+        iconClass: 'ri-truck-line',
+        title: 'Fast & Free Shopping',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, inventore.'
+    },
+    {
+        iconClass: 'ri-shopping-bag-2-line',
+        title: 'Easy to Shop',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, inventore.'
+    },
+    {
+        iconClass: 'ri-stack-line',
+        title: '24/7 support',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, inventore.'
+    },
+    {
+        iconClass: 'ri-infinity-fill',
+        title: 'Hassels free return',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, inventore.'
+    }
+];
+
+
+var page5_cards = [
+    {image:"images/images/product-1.png", heading:"Nordic Chair", data:"Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio", btn:"Read more"},
+    {image:"/images/images/product-2.png" , heading:"Kruze Aero Chair", data:"Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio", btn:"Read more"},
+    {image:"/images/images/product-3.png", heading:"Ergonomic Chair", data:"Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio", btn:"Read more"}
+]
+
+
+function card(){
+    var clutter = '';
+
+    page5_cards.forEach(function(product,idx){
+    clutter += ` <div class="first">
+    <img src="${product.image}">
+    <div class="data">
+        <h2>Nordic Chair</h2>
+        <h4>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio</h4>
+        <button>Read more</button>
+    </div>
+</div>`;
+
+})
+
+document.querySelector(".page5-cards").innerHTML = clutter;
+}
+
+card();
