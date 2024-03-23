@@ -82,3 +82,79 @@ document.querySelector(".page5-cards").innerHTML = clutter;
 }
 
 card();
+
+
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+
+
+var swiperdata = [
+    {image:"/images/images/person-1.jpg" , names:"Liza", title:"CEO, Co-Founder, XYZ Inc."},
+    {image:"/images/images/person_2.jpg" , names:"Marco", title:"CEO, Co-Founder, XYZ Inc."},
+    {image:"/images/images/person_3.jpg" , names:"Jorden", title:"CEO, Co-Founder, XYZ Inc."},
+]
+
+
+function swipercontent(){
+    var clutter = '';
+
+    swiperdata.forEach(function(product,idx){
+    clutter += `  <div class="swiper-slide">
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint temporibus, laudantium sed consectetur, mollitia explicabo atque quos vero praesentium tempora est, tempore tenetur. A quod eos quasi blanditiis ipsam nesciunt fugiat tempora est dolores nulla, maiores provident, quibusdam explicabo accusamus illo accusantium exercitationem voluptatibus magnam laudantium asperiores? Eligendi, magnam atque.
+    </p>
+
+    <div class="user">
+        <img src="${product.image}" alt="">
+        <h2>${product.names}</h2>
+        <h3>${product.title}</h3>
+
+        
+    </div>
+
+  </div>`;
+
+})
+
+document.querySelector(".swiper-wrapper").innerHTML = clutter;
+}
+
+swipercontent();
+
+
+
+var blog = [
+    {images:"images/images/post-1.jpg", heading:"First Time Home Owner Ideas", date:"by Robert Fox on Dec 15, 2021"},
+    {images:"images/images/post-2.jpg", heading:"How To Keep Your Furniture Clean", date:"by Robert Fox on Dec 15, 2021"},
+    {images:"images/images/post-3.jpg", heading:"Small Space Furniture Apartment Ideas", date:"by Robert Fox on Dec 12, 2021"},
+];
+
+
+function blogs(){
+    var clutter = '';
+
+    blog.forEach(function(product,idx){
+    clutter += `  <div class="blog1">
+    <img src="${product.images}" alt="">
+    <h1>First Time Home Owner Ideas</h1>
+    <h2>by Kristin Watson on Dec 19, 2021</h2>
+</div>`;
+
+})
+
+document.querySelector(".blogssss").innerHTML = clutter;
+}
+
+blogs();
