@@ -89,9 +89,9 @@ const cardData = [
 
 
 var page5_cards = [
-    {image:"images/images/product-1.png", heading:"Nordic Chair", data:"Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio", btn:"Read more"},
-    {image:"/images/images/product-2.png" , heading:"Kruze Aero Chair", data:"Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio", btn:"Read more"},
-    {image:"/images/images/product-3.png", heading:"Ergonomic Chair", data:"Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio", btn:"Read more"}
+    {image:"/imagesss/product-1.png", heading:"Nordic Chair", data:"Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio", btn:"Read more"},
+    {image:"/imagesss/product-2.png" , heading:"Kruze Aero Chair", data:"Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio", btn:"Read more"},
+    {image:"/imagesss/product-3.png", heading:"Ergonomic Chair", data:"Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio", btn:"Read more"}
 ]
 
 
@@ -133,9 +133,9 @@ var swiper = new Swiper(".mySwiper", {
 
 
 var swiperdata = [
-    {image:"/images/images/person-1.jpg" , names:"Liza", title:"CEO, Co-Founder, XYZ Inc."},
-    {image:"/images/images/person_2.jpg" , names:"Marco", title:"CEO, Co-Founder, XYZ Inc."},
-    {image:"/images/images/person_3.jpg" , names:"Jorden", title:"CEO, Co-Founder, XYZ Inc."},
+    {image:"/imagesss/person-1.jpg" , names:"Liza", title:"CEO, Co-Founder, XYZ Inc."},
+    {image:"/imagesss/person_2.jpg" , names:"Marco", title:"CEO, Co-Founder, XYZ Inc."},
+    {image:"/imagesss/person_3.jpg" , names:"Jorden", title:"CEO, Co-Founder, XYZ Inc."},
 ]
 
 
@@ -168,9 +168,9 @@ swipercontent();
 
 
 var blog = [
-    {images:"images/images/post-1.jpg", heading:"First Time Home Owner Ideas", date:"by Robert Fox on Dec 15, 2021"},
-    {images:"images/images/post-2.jpg", heading:"How To Keep Your Furniture Clean", date:"by Robert Fox on Dec 15, 2021"},
-    {images:"images/images/post-3.jpg", heading:"Small Space Furniture Apartment Ideas", date:"by Robert Fox on Dec 12, 2021"},
+    {images:"/imagesss/post-1.jpg", heading:"First Time Home Owner Ideas", date:"by Robert Fox on Dec 15, 2021"},
+    {images:"/imagesss/post-2.jpg", heading:"How To Keep Your Furniture Clean", date:"by Robert Fox on Dec 15, 2021"},
+    {images:"/imagesss/post-3.jpg", heading:"Small Space Furniture Apartment Ideas", date:"by Robert Fox on Dec 12, 2021"},
 ];
 
 
