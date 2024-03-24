@@ -1,7 +1,39 @@
-const scroll = new LocomotiveScroll({
-    el: document.querySelector('[data-scroll-container]'),
-    smooth: true
-});
+function loco(){
+    
+    gsap.registerPlugin(ScrollTrigger);
+    
+    // Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
+    
+    const locoScroll = new LocomotiveScroll({
+      el: document.querySelector(".main"),
+      smooth: true
+    });
+    // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
+    locoScroll.on("scroll", ScrollTrigger.update);
+    
+    // tell ScrollTrigger to use these proxy methods for the ".main" element since Locomotive Scroll is hijacking things
+    ScrollTrigger.scrollerProxy(".main", {
+      scrollTop(value) {
+        return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+      }, // we don't have to define a scrollLeft because we're only scrolling vertically.
+      getBoundingClientRect() {
+        return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
+      },
+      // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
+      pinType: document.querySelector(".main").style.transform ? "transform" : "fixed"
+    });
+    
+    
+    
+    // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
+    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+    
+    // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
+    ScrollTrigger.refresh();
+    }
+    
+    
+    loco();
 
 
 var product = [
@@ -158,3 +190,184 @@ document.querySelector(".blogssss").innerHTML = clutter;
 }
 
 blogs();
+
+
+
+
+// ----------------------------------animation
+
+var tl = gsap.timeline();
+
+tl.from(".page1 .furni", {
+    y:-100,
+    opacity:0
+})
+
+tl.from(".page1 h5", {
+    y:-100,
+    opacity:0,
+    stagger:1,
+    duration:0.5
+})
+
+tl.from(".page1 img", {
+    x:100,
+    opacity:0,
+    duration:1,
+    duration:0.5
+})
+
+tl.from(".page1 .left-content1>.h1,.p,#btn1,#btn2", {
+    x:-100,
+    opacity:0,
+    stagger:1,
+    duration:1
+})
+
+
+var tl2 = gsap.timeline({
+    scrollTrigger:{
+        trigger:".page2",
+        scroller:".main",
+        // markers:"true",  
+        start:"top 30%",
+        end:"top 10%",
+        scrub:2
+    }
+});
+
+
+tl2.from(".page2 .content-page2>h1,p,button",{
+    x:-100,
+    opacity:0,
+    stagger:1,
+    duration:1,
+})
+
+tl2.from(".page2 .cards",{
+    x:100,
+    opacity:0,
+    stagger:1,
+    duration:1,
+})
+
+
+var tl3 = gsap.timeline({
+    scrollTrigger:{
+        trigger:".page3",
+        scroller:".main",
+        // markers:"true",  
+        start:"top 30%",
+        end:"top 10%",
+        scrub:2
+    }
+});
+
+
+
+tl3.from(".page3 .card-1",{
+    y:100,
+    opacity:0,
+    stagger:1,
+    duration:1,
+})
+
+tl3.from(".page3 img",{
+    x:200,
+    y:100,
+    opacity:0,
+    duration:1,
+})  
+
+
+var tl4 = gsap.timeline({
+    scrollTrigger:{
+        trigger:".page4",
+        scroller:".main",
+        // markers:"true",  
+        start:"top 30%",
+        end:"top 10%",
+        scrub:4
+    }
+});
+
+tl4.from(".page4 .img1", {
+    y:200,
+    opacity:0
+})
+
+tl4.from(".page4 .img2", {
+    y:-200,
+    opacity:0
+})
+
+tl4.from(".page4 .img3", {
+    x:200,
+    opacity:0
+})
+
+tl4.from(".page4 .right-page4", {
+    x:200,
+    opacity:0
+})
+
+
+var tl5 = gsap.timeline({
+    scrollTrigger:{
+        trigger:".page5",
+        scroller:".main",
+        // markers:"true",  
+        start:"top 30%",
+        end:"top 10%",
+        scrub:4
+    }
+});
+
+tl5.from(".page5 .page5-cards",{
+    y:100,
+    opacity:0
+})
+
+tl5.from(".page5 .swiper-page5",{
+    y:100,
+    opacity:0
+})
+
+var tl6 = gsap.timeline({
+    scrollTrigger:{
+        trigger:".page5",
+        scroller:".main",
+        markers:"true",  
+        start:"40% 30%",
+        end:"40% 10%",
+        scrub:4
+    }
+});
+
+tl6.from(".page5 .blog1",{
+    y:100,
+    opacity:0,
+    stagger:1,
+})
+
+tl6.from(".page5 .sofa",{
+    // y:100,
+    opacity:0,
+    stagger:1,
+})
+
+
+var tl7 = gsap.timeline({
+    scrollTrigger:{
+        trigger:"footer",
+        scroller:".main",
+        markers:"true",  
+        start:"-50% 30%",
+        end:"-50% 10%",
+        scrub:4
+    }
+});
+
+tl7.from("footer",{
+    opacity:0
+})
