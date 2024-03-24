@@ -237,7 +237,7 @@ var tl2 = gsap.timeline({
 });
 
 
-tl2.from(".page2 .content-page2>h1,p,button",{
+tl2.from(".page2 .content-page2>h1,.p222,.btn-page2",{
     x:-100,
     opacity:0,
     stagger:1,
@@ -337,7 +337,7 @@ var tl6 = gsap.timeline({
     scrollTrigger:{
         trigger:".page5",
         scroller:".main",
-        markers:"true",  
+        // markers:"true",  
         start:"40% 30%",
         end:"40% 10%",
         scrub:4
@@ -361,7 +361,7 @@ var tl7 = gsap.timeline({
     scrollTrigger:{
         trigger:"footer",
         scroller:".main",
-        markers:"true",  
+        // markers:"true",  
         start:"-50% 30%",
         end:"-50% 10%",
         scrub:4
